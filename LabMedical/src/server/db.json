@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "roberto@usercep.com",
+      "password": "12345678"
+    },
+    {
+      "id": 2,
+      "email": "user@gmail.com",
+      "password": "qwertyui"
+    },
+    {
+      "id": 3,
+      "email": "usuario@usercep.com",
+      "password": "12345678"
+    },
+    {
+      "id": 4,
+      "email": "teste@teste.com",
+      "password": "12345678"
+    }
+  ],
+  "Medicos": [
+    {
+      "id": 1,
+      "email": "roberto@usercep.com",
+      "password": "12345678"
+    },
+    {
+      "id": 2,
+      "email": "user@gmail.com",
+      "password": "qwertyui"
+    },
+    {
+      "id": 3,
+      "email": "usuario@usercep.com",
+      "password": "12345678"
+    },
+    {
+      "id": 4,
+      "email": "teste@teste.com",
+      "password": "12345678"
+    }
+  ]
+}

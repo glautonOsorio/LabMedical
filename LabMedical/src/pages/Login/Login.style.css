@@ -1,0 +1,18 @@
+.loginContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.loginImageCollum {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10rem;
+  width: 110rem;
+  border-right: 0.3rem solid black;
+}
+
+.loginImage {
+  width: 10rem;
+  margin-left: 45rem;
+}
