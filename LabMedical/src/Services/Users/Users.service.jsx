@@ -1,56 +1,68 @@
-const API_URL = "http://localhost:3000/users";
-import { LocalStorageService } from "./LocalStorage.service";
+const API_URL = `http://localhost:3000/users`;
+const API_VIACEP = `http://viacep.com.br/ws/CEP/json/`;
 
+//Method GET
 const Get = async () => {
   const response = await fetch(API_URL);
   const data = await response.json();
-
   return data;
 };
 
-const Create = (data) => {
-  const users = Get();
+const GetCEP = async (cep) => {
+  const response = await fetch(
+    API_VIACEP.replace("CEP", cep.replace("-", "").trim())
+  );
+  const data = await response.json();
+  return data;
+};
 
-  data = {
-    id: users.length + 1,
-    ...data,
-  };
-
-  LocalStorageService.set("users", [...users, data]);
+const Create = async (newData) => {
+  await fetch(API_URL, {
+    method: "POST",
+    body: JSON.stringify({
+      email: newData.email,
+      password: newData.password,
+    }),
+    headers: {
+      "Content-type": "application/json",
+    },
+  })
+    .then(() => {
+      toast("cadastrado com sucesso");
+    })
+    .catch(() => {
+      alert("Erro ao cadastrar");
+    });
 };
 
 const Show = async (id) => {
   const response = await fetch(`${API_URL}/${id}`);
   const data = await response.json();
-
   return data;
 };
 
+//Method GET
 const ShowByEmail = async (email) => {
-  const filter = await `?email=${email}`;
+  let filter = `?`;
+
+  if (email) {
+    filter += `email=${email}&`;
+  }
+
   const response = await fetch(`${API_URL}${filter}`);
   const data = await response.json();
-
-  return data;
+  return data[0];
 };
 
-const Delete = (id) => {
-  LocalStorageService.set(
-    "users",
-    Get().filter((user) => user.id !== id)
-  );
-};
+//Method DELETE
+const Delete = (id) => {};
 
-const Update = (id, data) => {
-  const users = Get();
-
-  users[users.find((user) => user.id === id).indexOf] = data;
-
-  LocalStorageService.set("users", users);
-};
+//Method PUT/PATCH
+const Update = (id, data) => {};
 
 export const UserService = {
   Get,
+  GetCEP,
   Create,
   Show,
   ShowByEmail,

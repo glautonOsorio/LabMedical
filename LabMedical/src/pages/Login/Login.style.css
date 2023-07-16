@@ -1,15 +1,15 @@
 .loginContainer {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 98%;
 }
 
 .loginImageCollum {
   display: flex;
   flex-direction: column;
   margin-left: 10rem;
-  width: 110rem;
-  border-right: 0.3rem solid black;
+  width: 80rem;
+  border-right: 0.3rem solid #35abd0;
 }
 
 .loginImage {

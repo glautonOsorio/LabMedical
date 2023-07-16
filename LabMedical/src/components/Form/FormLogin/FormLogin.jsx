@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../../../contexts/auth.context";
 import { InputComponent } from "../../Input/Input";
+import { UserService } from "../../../services/Users/Users.service";
 import "./FormLogin.style.css";
 
 export const FormLogin = () => {
@@ -18,17 +19,12 @@ export const FormLogin = () => {
 
   const { setAuth } = useContext(AuthContext);
 
-  const createUser = () => {
-    UserService.Create({
-      email: "batata@frita.com",
-      password: "doMcDonalds",
-    });
-  };
-
-  const submitForm = (data) => {
+  const submitForm = async (data) => {
     const { email, password } = data;
 
-    const user = UserService.ShowByEmail(email);
+    await UserService.Create(data);
+
+    const user = await UserService.ShowByEmail(email);
 
     if (!user) {
       alert("Usuário não cadastrado");
@@ -39,6 +35,13 @@ export const FormLogin = () => {
     password === user.password
       ? redirectToHome(user)
       : alert("Ops! Usuário e/ou Senha Invalidos.");
+  };
+
+  const createUser = async (data) => {
+    const { email, password } = data;
+    await UserService.Create(data);
+
+    await UserService.GetCEP("34585040");
   };
 
   const redirectToHome = (user) => {
@@ -90,7 +93,6 @@ export const FormLogin = () => {
             <span>Esqueci minha senha</span>
             <button
               className="formCreateButton"
-              $outlined={true}
               type="button"
               onClick={createUser}
             >
@@ -99,7 +101,6 @@ export const FormLogin = () => {
           </div>
           <button
             className="formEnterButton"
-            $active={!errors.email && !errors.password}
             type="submit"
             disabled={errors.email || errors.password}
           >
