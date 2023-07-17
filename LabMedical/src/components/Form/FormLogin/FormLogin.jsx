@@ -22,8 +22,6 @@ export const FormLogin = () => {
   const submitForm = async (data) => {
     const { email, password } = data;
 
-    await UserService.Create(data);
-
     const user = await UserService.ShowByEmail(email);
 
     if (!user) {
@@ -32,16 +30,11 @@ export const FormLogin = () => {
       return;
     }
 
+    localStorage.setItem("Logged", data.email);
+
     password === user.password
       ? redirectToHome(user)
       : alert("Ops! Usuário e/ou Senha Invalidos.");
-  };
-
-  const createUser = async (data) => {
-    const { email, password } = data;
-    await UserService.Create(data);
-
-    await UserService.GetCEP("34585040");
   };
 
   const redirectToHome = (user) => {
@@ -49,8 +42,12 @@ export const FormLogin = () => {
     navigate("/");
   };
 
+  const redirectRegister = () => {
+    navigate("/register");
+  };
+
   return (
-    <form className="formContainer" onSubmit={handleSubmit(submitForm)}>
+    <form className="formLoginContainer" onSubmit={handleSubmit(submitForm)}>
       <div className="formContent">
         <header className="formHeader">
           <h1 className="formTitle">Login</h1>
@@ -90,11 +87,11 @@ export const FormLogin = () => {
 
         <div className="formAction">
           <div className="formLinks">
-            <span>Esqueci minha senha</span>
+            <a>Esqueci minha senha</a>
             <button
+              onClick={redirectRegister}
               className="formCreateButton"
               type="button"
-              onClick={createUser}
             >
               Criar conta
             </button>
