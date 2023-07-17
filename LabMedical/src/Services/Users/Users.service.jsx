@@ -1,3 +1,5 @@
+import { ToastContainer } from "react-toastify";
+
 const API_URL = `http://localhost:3000/users`;
 const API_VIACEP = `http://viacep.com.br/ws/CEP/json/`;
 
@@ -27,11 +29,11 @@ const Create = async (newData) => {
       "Content-type": "application/json",
     },
   })
-    .then(() => {
-      toast("cadastrado com sucesso");
+    .then((res) => {
+      alert("Cadastrado com sucesso");
     })
-    .catch(() => {
-      alert("Erro ao cadastrar");
+    .catch((err) => {
+      alert(`Erro ao cadastrar ${err.message}`);
     });
 };
 

@@ -10,7 +10,9 @@ const LoginPage = () => {
         <img src={Medical} alt="erro ao carregar" />
         <img className="loginImage" src={Lab} alt="erro ao carregar" />
       </div>
-      <FormLogin />
+      <div className="formContainer">
+        <FormLogin />
+      </div>
     </div>
   );
 };
