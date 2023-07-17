@@ -42,6 +42,10 @@ export const FormLogin = () => {
     navigate("/");
   };
 
+  const redirectRegister = () => {
+    navigate("/register");
+  };
+
   return (
     <form className="formLoginContainer" onSubmit={handleSubmit(submitForm)}>
       <div className="formContent">
@@ -84,7 +88,11 @@ export const FormLogin = () => {
         <div className="formAction">
           <div className="formLinks">
             <a>Esqueci minha senha</a>
-            <button className="formCreateButton" type="button">
+            <button
+              onClick={redirectRegister}
+              className="formCreateButton"
+              type="button"
+            >
               Criar conta
             </button>
           </div>
