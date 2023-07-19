@@ -1,0 +1,68 @@
+.navContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.navToolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-image: linear-gradient(to left, #e0ffff 5%, #20b2aa);
+  height: 6rem;
+}
+.navLogo {
+  display: flex;
+  margin-right: 10rem;
+}
+.navMenu {
+  display: flex;
+  margin: 1rem;
+  font-size: 3rem;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.navToolBarContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20rem;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to top right, #e0ffff 5%, #20b2aa);
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+.sideNavImage {
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #35abd0;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  transition: 0.5s;
+}

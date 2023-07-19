@@ -3,7 +3,9 @@
     {
       "id": 1,
       "email": "roberto@usercep.com",
-      "password": "12345678"
+      "password": "12345678",
+      "name": "GigaChad",
+      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg"
     },
     {
       "id": 2,

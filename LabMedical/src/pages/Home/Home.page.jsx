@@ -1,36 +1,24 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../contexts/auth.context";
 import { Navigate } from "react-router-dom";
 import "./Home.style.css";
+import NavBar from "../../components/NavBar/NavBar";
+import { NavContext } from "../../contexts/navbar.context";
 
 export const HomePage = () => {
   const { auth } = useContext(AuthContext);
   const loggedUser = localStorage.getItem("Logged");
+  const { setNavData } = useContext(NavContext);
 
-  const [abrir, setAbrir] = useState();
-
-  function abrirPokebola() {
-    if (abrir) {
-      setAbrir();
-    } else {
-      setAbrir("18rem");
-    }
-  }
+  useEffect(() => {
+    setNavData({ title: "Estatiscas e Informações" });
+  }, []);
 
   const render = () => {
     return (
-      <div>
-        <div className="sidenav" style={{ width: abrir }}>
-          <a className="closebtn" onClick={abrirPokebola}>
-            &times;
-          </a>
-          <a>About</a>
-          <a>Services</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a>
-        </div>
-
-        <span onClick={abrirPokebola}>open</span>
+      <div className="homeContainer">
+        <NavBar />
+        <div className="homeCardContainers">Farofa</div>
       </div>
     );
   };
