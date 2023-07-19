@@ -43,13 +43,7 @@ const Show = async (id) => {
 
 //Method GET
 const ShowByEmail = async (email) => {
-  let filter = `?`;
-
-  if (email) {
-    filter += `email=${email}&`;
-  }
-
-  const response = await fetch(`${API_URL}${filter}`);
+  const response = await fetch(`${API_URL}?email=${email}&`);
   const data = await response.json();
   return data[0];
 };

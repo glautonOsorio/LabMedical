@@ -1,11 +1,23 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import MedLogo from "../../assets/LABMedical Logo.png";
 import "./NavBar.style.css";
 import { NavContext } from "../../contexts/navbar.context";
+import { UserService } from "../../Services/Users/Users.service";
 
 const NavBar = () => {
   const { navData } = useContext(NavContext);
   const [open, setOpen] = useState();
+  const [user, setUser] = useState();
+
+  useEffect(() => {
+    let email = localStorage.getItem("Logged");
+    fetch(`http://localhost:3000/users?email=${email}`).then(
+      async (response) => {
+        const data = await response.json();
+        setUser(data[0]);
+      }
+    );
+  }, []);
 
   function OpenSidebar() {
     if (open) {
@@ -14,6 +26,7 @@ const NavBar = () => {
       setOpen("18rem");
     }
   }
+
   return (
     <div className="navContainer">
       <div className="navToolbar">
@@ -27,8 +40,12 @@ const NavBar = () => {
         <header className="navToolBarContent">
           <h1> {navData.title} </h1>
           <div>
-            <span> coisa</span>
-            <span> Imagem Sexy</span>
+            {user && (
+              <div className="navUser">
+                <span> {user.name} </span>
+                <img className="userImage" src={user.URL} alt="erro" />
+              </div>
+            )}
           </div>
         </header>
       </div>
