@@ -1,5 +1,3 @@
-import { ToastContainer } from "react-toastify";
-
 const API_URL = `http://localhost:3000/users`;
 const API_VIACEP = `http://viacep.com.br/ws/CEP/json/`;
 
@@ -45,13 +43,7 @@ const Show = async (id) => {
 
 //Method GET
 const ShowByEmail = async (email) => {
-  let filter = `?`;
-
-  if (email) {
-    filter += `email=${email}&`;
-  }
-
-  const response = await fetch(`${API_URL}${filter}`);
+  const response = await fetch(`${API_URL}?email=${email}&`);
   const data = await response.json();
   return data[0];
 };

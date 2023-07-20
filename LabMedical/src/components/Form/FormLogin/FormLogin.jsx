@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../../../contexts/auth.context";
 import { InputComponent } from "../../Input/Input";
-import { UserService } from "../../../services/Users/Users.service";
+import { UserService } from "../../../Services/Users/Users.service.jsx";
 import "./FormLogin.style.css";
 
 export const FormLogin = () => {
