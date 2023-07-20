@@ -14,6 +14,7 @@ const CardPatients = () => {
   return (
     <div>
       <div>
+        <h2>Informações Rápidas de Pacientes</h2>
         <InputComponent />
         <button>Busca</button>
       </div>
