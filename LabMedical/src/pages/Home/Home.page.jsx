@@ -4,6 +4,9 @@ import { Navigate } from "react-router-dom";
 import "./Home.style.css";
 import NavBar from "../../components/NavBar/NavBar";
 import { NavContext } from "../../contexts/navbar.context";
+import Cards from "../../components/Cards/Card/Card";
+import { InputComponent } from "../../components/Input/Input";
+import CardPatients from "../../components/Cards/PatientCards/PatientCards";
 
 export const HomePage = () => {
   const { auth } = useContext(AuthContext);
@@ -18,7 +21,10 @@ export const HomePage = () => {
     return (
       <div className="homeContainer">
         <NavBar />
-        <div className="homeCardContainers">Farofa</div>
+        <div className="homeCardContainers">
+          <Cards />
+          <CardPatients />
+        </div>
       </div>
     );
   };

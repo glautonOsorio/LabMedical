@@ -3,6 +3,7 @@
   height: 100%;
 }
 .homeCardContainers {
+  margin-left: 18rem;
   transition: margin-left 0.5s;
   padding: 20px;
 }

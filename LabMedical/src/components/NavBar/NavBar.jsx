@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import MedLogo from "../../assets/LABMedical Logo.png";
 import "./NavBar.style.css";
 import { NavContext } from "../../contexts/navbar.context";
-import { UserService } from "../../Services/Users/Users.service";
 
 const NavBar = () => {
   const { navData } = useContext(NavContext);
