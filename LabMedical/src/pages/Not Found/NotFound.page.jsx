@@ -2,11 +2,11 @@ import { useContext, useEffect } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import { NavContext } from "../../contexts/navbar.context";
 
-const RegisterPatient = () => {
+const NotFound = () => {
   const { setNavData } = useContext(NavContext);
 
   useEffect(() => {
-    setNavData({ title: "Cadastro de Paciente" });
+    setNavData({ title: "Pagina Não Encontrada" });
   }, []);
   return (
     <div>
@@ -15,4 +15,4 @@ const RegisterPatient = () => {
   );
 };
 
-export default RegisterPatient;
+export default NotFound;

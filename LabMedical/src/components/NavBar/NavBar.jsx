@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import MedLogo from "../../assets/LABMedical Logo.png";
 import "./NavBar.style.css";
 import { NavContext } from "../../contexts/navbar.context";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const { navData } = useContext(NavContext);
@@ -22,7 +23,7 @@ const NavBar = () => {
     if (open) {
       setOpen();
     } else {
-      setOpen("18rem");
+      setOpen("20rem");
     }
   }
 
@@ -30,7 +31,7 @@ const NavBar = () => {
     <div className="navContainer">
       <div className="navToolbar">
         <div className="navLogo">
-          <img className="sideNavImage" src={MedLogo} alt="Medical Logo" />
+          <img className="NavToolbarImage" src={MedLogo} alt="Medical Logo" />
 
           <span className="navMenu" onClick={OpenSidebar}>
             Menu
@@ -50,14 +51,35 @@ const NavBar = () => {
       </div>
 
       <div className="sidenav" style={{ width: open }}>
+        <img className="sideNavImage" src={MedLogo} alt="Medical Logo" />
+        <div className="sideNavCollum">
+          <span>Geral</span>
+          <button>
+            <Link to={"/"}>Home</Link>
+          </button>
+          <button>Sair</button>
+        </div>
+        <div className="sideNavCollum">
+          <span>Pacientes</span>
+          <button>
+            <Link to={"/register-patient"}>Cadastrar</Link>
+          </button>
+          <button>
+            <Link to={"/medical-records"}>Listar Prontuario</Link>
+          </button>
+        </div>
+        <div className="sideNavCollum">
+          <span>Exames</span>
+          <button>
+            <Link to={"/appointment"}>Cadastrar Consulta</Link>
+          </button>
+          <button>
+            <Link to={"/exams"}>Cadastrar Exame</Link>
+          </button>
+        </div>
         <a className="closebtn" onClick={OpenSidebar}>
           Fechar
         </a>
-        <img className="sideNavImage" src={MedLogo} alt="Medical Logo" />
-        <a>About</a>
-        <a>Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
       </div>
     </div>
   );
