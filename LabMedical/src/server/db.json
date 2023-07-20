@@ -4,29 +4,29 @@
       "id": 1,
       "email": "roberto@usercep.com",
       "password": "12345678",
-      "name": "GigaChad",
-      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg"
+      "name": "Roberto Garcia",
+      "URL": "https://pm1.aminoapps.com/7045/17a2d48b421327ce0657dcedf66e4e6706b3477er1-660-664v2_hq.jpg"
     },
     {
       "id": 2,
       "email": "user@gmail.com",
       "password": "qwertyui",
-      "name": "smallChad",
+      "name": "GigaChad",
       "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg"
     },
     {
       "id": 3,
       "email": "usuario@usercep.com",
       "password": "12345678",
-      "name": "giantChad",
-      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg"
+      "name": "Kermit The Frog",
+      "URL": "https://m.media-amazon.com/images/M/MV5BMTY5MDc0ODkyNV5BMl5BanBnXkFtZTcwODI4ODg3Ng@@._V1_FMjpg_UX1000_.jpg"
     },
     {
       "id": 4,
       "email": "teste@teste.com",
       "password": "12345678",
-      "name": "miniChad",
-      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg"
+      "name": "Macaco",
+      "URL": "https://media.npr.org/assets/img/2017/09/12/macaca_nigra_self-portrait-3e0070aa19a7fe36e802253048411a38f14a79f8-s1100-c50.jpg"
     }
   ],
   "pacientes": [
@@ -45,6 +45,7 @@
       "emergency-contact": "554566546546546",
       "allergies": "feijão",
       "specific-care": "tapa na cara",
+      "insurance": "Unimed",
       "insurance-number": "4646465",
       "insurance-expire-date": "20/40/6080",
       "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
@@ -76,6 +77,7 @@
       "emergency-contact": "554566546546546",
       "allergies": "feijão",
       "specific-care": "tapa na cara",
+      "insurance": "Unimed",
       "insurance-number": "4646465",
       "insurance-expire-date": "20/40/6080",
       "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
@@ -107,6 +109,7 @@
       "emergency-contact": "554566546546546",
       "allergies": "feijão",
       "specific-care": "tapa na cara",
+      "insurance": "Unimed",
       "insurance-number": "4646465",
       "insurance-expire-date": "20/40/6080",
       "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
@@ -138,6 +141,7 @@
       "emergency-contact": "554566546546546",
       "allergies": "feijão",
       "specific-care": "tapa na cara",
+      "insurance": "Unimed",
       "insurance-number": "4646465",
       "insurance-expire-date": "20/40/6080",
       "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",

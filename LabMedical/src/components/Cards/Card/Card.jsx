@@ -1,3 +1,4 @@
+import "./Card.style.css";
 import { useEffect, useState } from "react";
 
 const Cards = () => {
@@ -30,9 +31,31 @@ const Cards = () => {
 
   return (
     <main className="cardContainer">
-      <div>{exames}</div>
-      <div>{pacientes}</div>
-      <div>{consultas} </div>
+      <h3>Estatisticas do Sisterma</h3>
+      <div className=" cardRow">
+        <div className="cardContent">
+          <div className="cardCollum">
+            <span> Imagem</span>
+            <span>{pacientes}</span>
+          </div>
+          <h4>Pacientes</h4>
+        </div>
+        <div className="cardContent">
+          <div className="cardCollum">
+            <span> Imagem</span>
+            {consultas}
+          </div>
+          <h4>Consultas</h4>
+        </div>
+
+        <div className="cardContent">
+          <div className="cardCollum">
+            <span> Imagem</span>
+            {exames}
+          </div>
+          <h4>Exames</h4>
+        </div>
+      </div>
     </main>
   );
 };

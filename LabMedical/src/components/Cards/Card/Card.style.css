@@ -1,4 +1,29 @@
 .cardContainer {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+}
+
+.cardRow {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  width: 16rem;
+  height: 12rem;
+  box-shadow: 7px 7px 5px 0px rgba(224, 221, 224, 0.52);
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.cardCollum {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }

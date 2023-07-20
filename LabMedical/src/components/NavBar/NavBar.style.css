@@ -37,6 +37,7 @@
 }
 .userImage {
   width: 4rem;
+  height: 3.8rem;
   border-radius: 4rem;
   border: 0.1rem solid black;
 }
