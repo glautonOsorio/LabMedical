@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import { NavContext } from "../../contexts/navbar.context";
+import FormRegister from "../../components/Form/FormRegisterPatient/FormRegisterPatient";
 
 const RegisterPatient = () => {
   const { setNavData } = useContext(NavContext);
@@ -11,6 +12,7 @@ const RegisterPatient = () => {
   return (
     <div>
       <NavBar />
+      <FormRegister />
     </div>
   );
 };

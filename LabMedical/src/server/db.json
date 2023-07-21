@@ -42,12 +42,12 @@
       "telephone": "465456464654564",
       "e-mail": "asfas@asfas.com",
       "nationality": "Australia",
-      "emergency-contact": "554566546546546",
+      "emergency": "554566546546546",
       "allergies": "feijão",
-      "specific-care": "tapa na cara",
+      "specificCare": "tapa na cara",
       "insurance": "Unimed",
-      "insurance-number": "4646465",
-      "insurance-expire-date": "20/40/6080",
+      "insuranceNumber": "4646465",
+      "expireDate": "20/40/6080",
       "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
       "endereço": [
         {
@@ -58,7 +58,7 @@
           "number": "666",
           "complement": "sei la",
           "street": "coisacoisada",
-          "reference-point": "coisucoisudu"
+          "referencePoint": "coisucoisudu"
         }
       ]
     },
@@ -74,12 +74,12 @@
       "telephone": "465456464654564",
       "e-mail": "asfas@asfas.com",
       "nationality": "Australia",
-      "emergency-contact": "554566546546546",
+      "emergency": "554566546546546",
       "allergies": "feijão",
-      "specific-care": "tapa na cara",
+      "specificCare": "tapa na cara",
       "insurance": "Unimed",
-      "insurance-number": "4646465",
-      "insurance-expire-date": "20/40/6080",
+      "insuranceNumber": "4646465",
+      "expireDate": "20/40/6080",
       "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
       "endereço": [
         {
@@ -90,7 +90,7 @@
           "number": "666",
           "complement": "sei la",
           "street": "coisacoisada",
-          "reference-point": "coisucoisudu"
+          "referencePoint": "coisucoisudu"
         }
       ]
     },
@@ -106,12 +106,12 @@
       "telephone": "465456464654564",
       "e-mail": "asfas@asfas.com",
       "nationality": "Australia",
-      "emergency-contact": "554566546546546",
+      "emergency": "554566546546546",
       "allergies": "feijão",
-      "specific-care": "tapa na cara",
+      "specificCare": "tapa na cara",
       "insurance": "Unimed",
-      "insurance-number": "4646465",
-      "insurance-expire-date": "20/40/6080",
+      "insuranceNumber": "4646465",
+      "expireDate": "20/40/6080",
       "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
       "endereço": [
         {
@@ -122,7 +122,7 @@
           "number": "666",
           "complement": "sei la",
           "street": "coisacoisada",
-          "reference-point": "coisucoisudu"
+          "referencePoint": "coisucoisudu"
         }
       ]
     },
@@ -138,12 +138,12 @@
       "telephone": "465456464654564",
       "e-mail": "asfas@asfas.com",
       "nationality": "Australia",
-      "emergency-contact": "554566546546546",
+      "emergency": "554566546546546",
       "allergies": "feijão",
-      "specific-care": "tapa na cara",
+      "specificCare": "tapa na cara",
       "insurance": "Unimed",
-      "insurance-number": "4646465",
-      "insurance-expire-date": "20/40/6080",
+      "insuranceNumber": "4646465",
+      "expireDate": "20/40/6080",
       "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
       "endereço": [
         {
@@ -154,7 +154,7 @@
           "number": "666",
           "complement": "sei la",
           "street": "coisacoisada",
-          "reference-point": "coisucoisudu"
+          "referencePoint": "coisucoisudu"
         }
       ]
     }

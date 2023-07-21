@@ -1,0 +1,11 @@
+.formRegisterP {
+  width: 60rem;
+  margin-left: 21rem;
+  margin-top: 2rem;
+  transition: margin-left 0.5s;
+}
+
+.formRow {
+  display: flex;
+  flex-direction: row;
+}
