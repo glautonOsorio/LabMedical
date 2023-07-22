@@ -43,7 +43,7 @@ const NavBar = () => {
             {user && (
               <div className="navUser">
                 <span> {user.name} </span>
-                <img className="userImage" src={user.URL} alt="erro" />
+                <img className="userImage" src={user.url} alt="perfil" />
               </div>
             )}
           </div>

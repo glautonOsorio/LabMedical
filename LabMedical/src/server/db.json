@@ -5,28 +5,28 @@
       "email": "roberto@usercep.com",
       "password": "12345678",
       "name": "Roberto Garcia",
-      "URL": "https://pm1.aminoapps.com/7045/17a2d48b421327ce0657dcedf66e4e6706b3477er1-660-664v2_hq.jpg"
+      "url": "https://pm1.aminoapps.com/7045/17a2d48b421327ce0657dcedf66e4e6706b3477er1-660-664v2_hq.jpg"
     },
     {
       "id": 2,
       "email": "user@gmail.com",
       "password": "qwertyui",
       "name": "GigaChad",
-      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg"
+      "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg"
     },
     {
       "id": 3,
       "email": "usuario@usercep.com",
       "password": "12345678",
       "name": "Kermit The Frog",
-      "URL": "https://m.media-amazon.com/images/M/MV5BMTY5MDc0ODkyNV5BMl5BanBnXkFtZTcwODI4ODg3Ng@@._V1_FMjpg_UX1000_.jpg"
+      "url": "https://m.media-amazon.com/images/M/MV5BMTY5MDc0ODkyNV5BMl5BanBnXkFtZTcwODI4ODg3Ng@@._V1_FMjpg_UX1000_.jpg"
     },
     {
       "id": 4,
       "email": "teste@teste.com",
       "password": "12345678",
       "name": "Macaco",
-      "URL": "https://media.npr.org/assets/img/2017/09/12/macaca_nigra_self-portrait-3e0070aa19a7fe36e802253048411a38f14a79f8-s1100-c50.jpg"
+      "url": "https://media.npr.org/assets/img/2017/09/12/macaca_nigra_self-portrait-3e0070aa19a7fe36e802253048411a38f14a79f8-s1100-c50.jpg"
     }
   ],
   "pacientes": [
@@ -38,9 +38,9 @@
       "birthdate": "66/66/6969",
       "cpf": "66666666655",
       "rg": "21231131311231311131",
-      "marital-status": "casado",
+      "maritalStatus": "casado",
       "telephone": "465456464654564",
-      "e-mail": "asfas@asfas.com",
+      "email": "asfas@asfas.com",
       "nationality": "Australia",
       "emergency": "554566546546546",
       "allergies": "feijão",
@@ -48,19 +48,15 @@
       "insurance": "Unimed",
       "insuranceNumber": "4646465",
       "expireDate": "20/40/6080",
-      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
-      "endereço": [
-        {
-          "cep": "654654",
-          "city": "florianópolis",
-          "state": "Santa Catarina",
-          "place": "sei la",
-          "number": "666",
-          "complement": "sei la",
-          "street": "coisacoisada",
-          "referencePoint": "coisucoisudu"
-        }
-      ]
+      "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
+      "cep": "654654",
+      "city": "florianópolis",
+      "state": "Santa Catarina",
+      "place": "sei la",
+      "number": "666",
+      "complement": "sei la",
+      "street": "coisacoisada",
+      "referencePoint": "coisucoisudu"
     },
     {
       "id": 2,
@@ -70,9 +66,9 @@
       "birthdate": "66/66/6969",
       "cpf": "66666666655",
       "rg": "21231131311231311131",
-      "marital-status": "casado",
+      "maritalStatus": "casado",
       "telephone": "465456464654564",
-      "e-mail": "asfas@asfas.com",
+      "email": "asfas@asfas.com",
       "nationality": "Australia",
       "emergency": "554566546546546",
       "allergies": "feijão",
@@ -80,19 +76,15 @@
       "insurance": "Unimed",
       "insuranceNumber": "4646465",
       "expireDate": "20/40/6080",
-      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
-      "endereço": [
-        {
-          "cep": "654654",
-          "city": "florianópolis",
-          "state": "Santa Catarina",
-          "place": "sei la",
-          "number": "666",
-          "complement": "sei la",
-          "street": "coisacoisada",
-          "referencePoint": "coisucoisudu"
-        }
-      ]
+      "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
+      "cep": "654654",
+      "city": "florianópolis",
+      "state": "Santa Catarina",
+      "place": "sei la",
+      "number": "666",
+      "complement": "sei la",
+      "street": "coisacoisada",
+      "referencePoint": "coisucoisudu"
     },
     {
       "id": 3,
@@ -102,9 +94,9 @@
       "birthdate": "66/66/6969",
       "cpf": "66666666655",
       "rg": "21231131311231311131",
-      "marital-status": "casado",
+      "maritalStatus": "casado",
       "telephone": "465456464654564",
-      "e-mail": "asfas@asfas.com",
+      "email": "asfas@asfas.com",
       "nationality": "Australia",
       "emergency": "554566546546546",
       "allergies": "feijão",
@@ -112,19 +104,15 @@
       "insurance": "Unimed",
       "insuranceNumber": "4646465",
       "expireDate": "20/40/6080",
-      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
-      "endereço": [
-        {
-          "cep": "654654",
-          "city": "florianópolis",
-          "state": "Santa Catarina",
-          "place": "sei la",
-          "number": "666",
-          "complement": "sei la",
-          "street": "coisacoisada",
-          "referencePoint": "coisucoisudu"
-        }
-      ]
+      "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
+      "cep": "654654",
+      "city": "florianópolis",
+      "state": "Santa Catarina",
+      "place": "sei la",
+      "number": "666",
+      "complement": "sei la",
+      "street": "coisacoisada",
+      "referencePoint": "coisucoisudu"
     },
     {
       "id": 4,
@@ -134,9 +122,9 @@
       "birthdate": "66/66/6969",
       "cpf": "66666666655",
       "rg": "21231131311231311131",
-      "marital-status": "casado",
+      "maritalStatus": "casado",
       "telephone": "465456464654564",
-      "e-mail": "asfas@asfas.com",
+      "email": "asfas@asfas.com",
       "nationality": "Australia",
       "emergency": "554566546546546",
       "allergies": "feijão",
@@ -144,19 +132,67 @@
       "insurance": "Unimed",
       "insuranceNumber": "4646465",
       "expireDate": "20/40/6080",
-      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
-      "endereço": [
-        {
-          "cep": "654654",
-          "city": "florianópolis",
-          "state": "Santa Catarina",
-          "place": "sei la",
-          "number": "666",
-          "complement": "sei la",
-          "street": "coisacoisada",
-          "referencePoint": "coisucoisudu"
-        }
-      ]
+      "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
+      "cep": "654654",
+      "city": "florianópolis",
+      "state": "Santa Catarina",
+      "place": "sei la",
+      "number": "666",
+      "complement": "sei la",
+      "street": "coisacoisada",
+      "referencePoint": "coisucoisudu"
+    },
+    {
+      "name": "Glauton Osorio",
+      "gender": "Homem",
+      "birthdate": "2000-06-26T00:00:00.000Z",
+      "cpf": "99999999988",
+      "rg": "4464645646464",
+      "maritalStatus": "Divorciado",
+      "telephone": "99999999777",
+      "email": "tinhoso@yahoo.com",
+      "nationality": "Inferno",
+      "emergency": "99555999777",
+      "allergies": "coisas",
+      "specificCare": "dedo no cu",
+      "insurance": "Unimed",
+      "insuranceNumber": "111111",
+      "expireDate": "2200-06-26",
+      "cep": "",
+      "city": "",
+      "state": "",
+      "place": "",
+      "number": "",
+      "complement": "",
+      "street": "",
+      "referencePoint": "",
+      "id": 5
+    },
+    {
+      "name": "Glauton Osorio",
+      "gender": "Homem",
+      "birthdate": "2000-06-26T00:00:00.000Z",
+      "cpf": "99999999988",
+      "rg": "4464645646464",
+      "maritalStatus": "Divorciado",
+      "telephone": "99999999777",
+      "email": "tinhoso@yahoo.com",
+      "nationality": "Inferno",
+      "emergency": "99555999777",
+      "allergies": "coisas",
+      "specificCare": "dedo no cu",
+      "insurance": "Unimed",
+      "insuranceNumber": "111111",
+      "expireDate": "2200-06-26",
+      "cep": "",
+      "city": "",
+      "state": "",
+      "place": "",
+      "number": "",
+      "complement": "",
+      "street": "",
+      "referencePoint": "",
+      "id": 6
     }
   ],
   "consultas": [
@@ -214,7 +250,7 @@
       "time": "21:22",
       "type": "Lobotomia Transorbital",
       "lab": "Super Medicos Reais",
-      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
+      "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
       "result": "Morto"
     },
     {
@@ -224,7 +260,7 @@
       "time": "21:22",
       "type": "Lobotomia Transorbital",
       "lab": "Super Medicos Reais",
-      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
+      "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
       "result": "Morto"
     },
     {
@@ -234,7 +270,7 @@
       "time": "21:22",
       "type": "Lobotomia Transorbital",
       "lab": "Super Medicos Reais",
-      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
+      "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
       "result": "Morto"
     },
     {
@@ -244,7 +280,7 @@
       "time": "21:22",
       "type": "Lobotomia Transorbital",
       "lab": "Super Medicos Reais",
-      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
+      "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
       "result": "Morto"
     },
     {
@@ -254,7 +290,7 @@
       "time": "21:22",
       "type": "Lobotomia Transorbital",
       "lab": "Super Medicos Reais",
-      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
+      "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
       "result": "Morto"
     },
     {
@@ -264,7 +300,7 @@
       "time": "21:22",
       "type": "Lobotomia Transorbital",
       "lab": "Super Medicos Reais",
-      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
+      "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
       "result": "Morto"
     },
     {
@@ -274,7 +310,7 @@
       "time": "21:22",
       "type": "Lobotomia Transorbital",
       "lab": "Super Medicos Reais",
-      "URL": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
+      "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
       "result": "Morto"
     }
   ]

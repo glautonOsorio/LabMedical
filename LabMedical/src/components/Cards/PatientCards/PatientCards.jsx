@@ -22,7 +22,7 @@ const CardPatients = () => {
         pacientes.map((paciente) => {
           return (
             <div key={paciente?.id}>
-              <img src={paciente?.URL} alt="erro" />
+              <img src={paciente?.url} alt="erro" />
               <h1> {paciente?.name}</h1>
               <p> {paciente?.age}</p>
               <span> {paciente?.telephone}</span>

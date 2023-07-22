@@ -27,8 +27,6 @@ const Cards = () => {
       setPacientes(number);
     });
   }, []);
-  console.log(exames, pacientes, consultas);
-
   return (
     <main className="cardContainer">
       <h3>Estatisticas do Sisterma</h3>

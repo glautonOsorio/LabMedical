@@ -13,7 +13,7 @@ const FormRegister = () => {
 
   const navigate = useNavigate();
 
-  const submitForm = async (data) => {
+  const submitForm = async () => {
     const { email, password } = data;
     await UserService.Create(data);
 

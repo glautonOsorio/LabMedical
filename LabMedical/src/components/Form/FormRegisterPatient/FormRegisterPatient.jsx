@@ -1,20 +1,53 @@
 import { useForm } from "react-hook-form";
 import { InputComponent } from "../../Input/Input";
 import "./FormRegisterPatient.style.css";
+import { Patient } from "../../../Services/Patients/Patient.service";
 
 const FormRegister = () => {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm();
 
+  const submitForm = async (data) => {
+    const {
+      name,
+      gender,
+      age,
+      birthdate,
+      cpf,
+      rg,
+      maritalStatus,
+      telephone,
+      email,
+      nationality,
+      emergency,
+      allergies,
+      specificCare,
+      insurance,
+      insuranceNumber,
+      expireDate,
+      url,
+      cep,
+      city,
+      state,
+      place,
+      number,
+      complement,
+      street,
+      referencePoint,
+    } = data;
+    await Patient.Create(data);
+  };
+
   return (
-    <div className="formRegisterP">
-      <h2>Preencha os campos para cadastrar</h2>
+    <div className="formRegisterP" onSubmit={handleSubmit(submitForm)}>
       <form>
+        <legend>Preencha os campos para cadastrar</legend>
         <div>
-          <h3>Indentificação</h3>
+          <legend>Indentificação</legend>
           <div className="formRow">
             <InputComponent
               id="fullName"
@@ -80,7 +113,7 @@ const FormRegister = () => {
               <label htmlFor="maritalStatus">Estado Civil</label>
               <select
                 id="maritalStatus"
-                {...register("marital-status", { required: true })}
+                {...register("maritalStatus", { required: true })}
               >
                 <option value="Solteiro">Solteiro</option>
                 <option value="Casado">Casado</option>
@@ -115,9 +148,9 @@ const FormRegister = () => {
               id="email"
               type="email"
               placeholder="Digite seu email"
-              label="E-mail"
+              label="email"
               register={{
-                ...register("e-mail", {
+                ...register("email", {
                   validate: {
                     matchPath: (v) =>
                       /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v),
@@ -165,7 +198,7 @@ const FormRegister = () => {
           </div>
         </div>
         <div>
-          <h3>Convênio</h3>
+          <legend>Convênio</legend>
 
           <div className="formRow">
             <InputComponent
@@ -200,7 +233,7 @@ const FormRegister = () => {
           </div>
         </div>
         <div>
-          <h3>Dados de Endereço</h3>
+          <legend>Dados de Endereço</legend>
           <div className="formRow">
             <InputComponent
               id="cep"
@@ -294,6 +327,39 @@ const FormRegister = () => {
               error={errors.referencePoint}
               readOnly
             />
+          </div>
+          <div>
+            <button disabled> Editar</button>
+            <button disabled> Deletar</button>
+            <button
+              type="submit"
+              disabled={
+                errors.fullName ||
+                errors.birthdate ||
+                errors.cpf ||
+                errors.rg ||
+                errors.telephone ||
+                errors.emergency ||
+                errors.email ||
+                errors.nationalit ||
+                errors.allergies ||
+                errors.specificCa ||
+                errors.insurance ||
+                errors.insuranceN ||
+                errors.expireDate ||
+                errors.cep ||
+                errors.city ||
+                errors.state ||
+                errors.place ||
+                errors.number ||
+                errors.complement ||
+                errors.street ||
+                errors.referenceP
+              }
+            >
+              {" "}
+              Salvar
+            </button>
           </div>
         </div>
       </form>

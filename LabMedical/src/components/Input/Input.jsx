@@ -61,7 +61,6 @@ export const InputComponent = ({
 InputComponent.propTypes = {
   label: PropTypes.string,
   type: PropTypes.string,
-  id: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   register: PropTypes.any,
   error: PropTypes.any,
