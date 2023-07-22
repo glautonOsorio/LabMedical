@@ -1,21 +1,15 @@
-const API_URL = `http://localhost:3000/exames`;
+const API_URL = `http://localhost:3000/consultas`;
 
-const Get = async () => {
-  const response = await fetch(API_URL);
-  const data = await response.json();
-  return data;
-};
 const Create = async (newData) => {
   await fetch(API_URL, {
     method: "POST",
     body: JSON.stringify({
-      name: newData.name,
+      reason: newData.reason,
       date: newData.date,
       time: newData.time,
-      type: newData.type,
-      lab: newData.lab,
-      url: newData.url,
-      result: newData.result,
+      description: newData.description,
+      recipe: newData.recipe,
+      dosage: newData.dosage,
     }),
     headers: {
       "Content-type": "application/json",
@@ -28,7 +22,7 @@ const Create = async (newData) => {
       alert(`Erro ao cadastrar ${err.message}`);
     });
 };
-export const ExamsData = {
-  Get,
+
+export const AppoitmentData = {
   Create,
 };

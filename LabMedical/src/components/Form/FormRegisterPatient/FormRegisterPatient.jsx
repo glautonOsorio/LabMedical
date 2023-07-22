@@ -77,7 +77,7 @@ const FormRegister = () => {
               type="date"
               label="Data de Nascimento"
               register={{
-                ...register("birthdate", { required: true, valueAsDate: true }),
+                ...register("birthdate", { required: true }),
               }}
               error={errors.birthdate}
             />
@@ -357,7 +357,6 @@ const FormRegister = () => {
                 errors.referenceP
               }
             >
-              {" "}
               Salvar
             </button>
           </div>

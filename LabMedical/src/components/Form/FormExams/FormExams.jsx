@@ -1,8 +1,8 @@
-import { AppoitmentData } from "../../../Services/Appoitments/Appoitments.service";
+import { ExamsData } from "../../../Services/Exams/Exams.service";
 import { InputComponent } from "../../Input/Input";
 import { useForm } from "react-hook-form";
 
-const FormAppointment = () => {
+const FormExams = () => {
   const {
     register,
     handleSubmit,
@@ -10,8 +10,8 @@ const FormAppointment = () => {
     formState: { errors },
   } = useForm();
   const submitForm = async (data) => {
-    const { reason, date, time, description, recipe, dosage } = data;
-    await AppoitmentData.Create(data);
+    const { name, date, time, type, lab, url, result } = data;
+    await ExamsData.Create(data);
   };
   return (
     <main>
@@ -24,23 +24,23 @@ const FormAppointment = () => {
         <legend>Consulta de paciente</legend>
         <div>
           <InputComponent
-            id="reason"
+            id="name"
             type="text"
-            placeholder="Motivo"
-            label="Motivo da Consulta"
+            placeholder="Nome do Exame"
+            label="Nome do Exame"
             register={{
-              ...register("reason", {
+              ...register("name", {
                 required: true,
-                minlenght: 6,
-                maxLength: 60,
+                minlenght: 5,
+                maxLength: 50,
               }),
             }}
-            error={errors.reason}
+            error={errors.name}
           />
           <InputComponent
             id="date"
             type="date"
-            label="Data da Consulta"
+            label="Data do Exame"
             register={{
               ...register("date", { required: true, valueAsDate: true }),
             }}
@@ -49,7 +49,7 @@ const FormAppointment = () => {
           <InputComponent
             id="time"
             type="time"
-            label="Horário da Consulta"
+            label="Horário do Exame"
             register={{
               ...register("time", { required: true }),
             }}
@@ -58,39 +58,56 @@ const FormAppointment = () => {
         </div>
         <div>
           <InputComponent
-            id="description"
-            type="textarea"
-            placeholder="Descrição do Problema"
+            id="type"
+            type="text"
+            placeholder="Tipo do Exame"
+            label="Tipo do Exame"
             register={{
-              ...register("description", {
+              ...register("type", {
+                required: true,
+                minlenght: 5,
+                maxLength: 30,
+              }),
+            }}
+            error={errors.type}
+          />
+          <InputComponent
+            id="lab"
+            type="text"
+            placeholder="Laboratório"
+            label="Laboratório"
+            register={{
+              ...register("lab", {
+                required: true,
+                minlenght: 5,
+                maxLength: 30,
+              }),
+            }}
+            error={errors.lab}
+          />
+          <InputComponent
+            id="url"
+            type="text"
+            placeholder="URL do Documento"
+            label="URL do Documento"
+            register={{
+              ...register("url"),
+            }}
+            error={errors.url}
+          />
+
+          <InputComponent
+            id="result"
+            type="textarea"
+            label="Resultados"
+            register={{
+              ...register("result", {
                 required: true,
                 minlenght: 15,
                 maxLength: 1000,
               }),
             }}
-            error={errors.description}
-          />
-          <InputComponent
-            id="recipe"
-            type="textarea"
-            placeholder="Medicação Receitada"
-            register={{
-              ...register("recipe"),
-            }}
-            error={errors.recipe}
-          />
-          <InputComponent
-            id="dosage"
-            type="textarea"
-            placeholder="Dosagem e Precauções"
-            register={{
-              ...register("dosage", {
-                required: true,
-                minlenght: 15,
-                maxLength: 250,
-              }),
-            }}
-            error={errors.dosage}
+            error={errors.result}
           />
         </div>
         <div>
@@ -103,4 +120,4 @@ const FormAppointment = () => {
   );
 };
 
-export default FormAppointment;
+export default FormExams;
