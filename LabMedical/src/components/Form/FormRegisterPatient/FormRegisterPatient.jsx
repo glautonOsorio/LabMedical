@@ -39,6 +39,11 @@ const FormRegister = () => {
       street,
       referencePoint,
     } = data;
+
+    if (data.insurance === "") {
+      await setValue("insurance", "Sem Plano");
+    }
+
     await Patient.Create(data);
   };
 

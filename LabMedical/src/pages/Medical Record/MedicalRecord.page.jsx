@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
-import NavBar from "../../components/NavBar/NavBar";
 import { NavContext } from "../../contexts/navbar.context";
+import NavBar from "../../components/NavBar/NavBar";
+import MedicalRecords from "../../components/MedicalRecords/MedicalRecords";
 
 const MedicalRecord = () => {
   const { setNavData } = useContext(NavContext);
@@ -11,6 +12,7 @@ const MedicalRecord = () => {
   return (
     <div>
       <NavBar />
+      <MedicalRecords />
     </div>
   );
 };
