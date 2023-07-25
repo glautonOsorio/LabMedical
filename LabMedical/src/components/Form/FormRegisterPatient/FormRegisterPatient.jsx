@@ -1,16 +1,67 @@
+import { useLocation, useParams } from "react-router-dom";
+
 import { useForm } from "react-hook-form";
 import { InputComponent } from "../../Input/Input";
-import "./FormRegisterPatient.style.css";
 import { Patient } from "../../../Services/Patients/Patient.service";
+import { useEffect, useState } from "react";
+import "./FormRegisterPatient.style.css";
 
 const FormRegister = () => {
   const {
     register,
     handleSubmit,
+    watch,
     setValue,
     formState: { errors },
   } = useForm();
+  const [disabled, setDisabled] = useState(true);
+  const params = useParams();
 
+  useEffect(() => {
+    if (params.id) {
+      const paramsUser = async () => {
+        await Patient.Show(params.id).then((user) => {
+          setValue("name", user.name);
+          setValue("gender", user.gender);
+          setValue("age", user.age);
+          setValue("birthdate", user.birthdate);
+          setValue("cpf", user.cpf);
+          setValue("rg", user.rg);
+          setValue("maritalStatus", user.maritalStatus);
+          setValue("telephone", user.telephone);
+          setValue("email", user.email);
+          setValue("nationality", user.nationality);
+          setValue("emergency", user.emergency);
+          setValue("allergies", user.allergies);
+          setValue("specificCare", user.specificCare);
+          setValue("insurance", user.insurance);
+          setValue("insuranceNumber", user.insuranceNumber);
+          setValue("expireDate", user.expireDate);
+          setValue("url", user.url);
+          setValue("cep", user.cep);
+          setValue("city", user.city);
+          setValue("state", user.state);
+          setValue("place", user.place);
+          setValue("number", user.number);
+          setValue("complement", user.complement);
+          setValue("street", user.street);
+          setValue("referencePoint", user.referencePoint);
+        });
+      };
+      paramsUser();
+      setDisabled(false);
+    }
+  }, []);
+
+  const handleCep = async () => {
+    await Patient.GetCEP(watch("cep")).then((response) => {
+      setValue("city", response.localidade);
+      setValue("state", response.uf);
+      setValue("place", response.logradouro);
+      setValue("complement", response.complemento);
+      setValue("street", response.bairro);
+    });
+  };
   const submitForm = async (data) => {
     const {
       name,
@@ -45,6 +96,42 @@ const FormRegister = () => {
     }
 
     await Patient.Create(data);
+  };
+  const submitEdit = async (data) => {
+    const {
+      name,
+      gender,
+      age,
+      birthdate,
+      cpf,
+      rg,
+      maritalStatus,
+      telephone,
+      email,
+      nationality,
+      emergency,
+      allergies,
+      specificCare,
+      insurance,
+      insuranceNumber,
+      expireDate,
+      url,
+      cep,
+      city,
+      state,
+      place,
+      number,
+      complement,
+      street,
+      referencePoint,
+    } = data;
+
+    await Patient.Update(params.id, data);
+    {
+    }
+  };
+  const submitDelete = async () => {
+    await Patient.Delete(params.id);
   };
 
   return (
@@ -250,6 +337,9 @@ const FormRegister = () => {
               }}
               error={errors.cep}
             />
+            <button type="button" onClick={handleCep}>
+              Cep teste
+            </button>
             <InputComponent
               id="city"
               type="text"
@@ -266,11 +356,11 @@ const FormRegister = () => {
               type="text"
               placeholder="Estado"
               label="Estado"
+              readOnly
               register={{
                 ...register("state"),
               }}
               error={errors.state}
-              readOnly
             />
           </div>
           <div className="formRow">
@@ -334,8 +424,16 @@ const FormRegister = () => {
             />
           </div>
           <div>
-            <button disabled> Editar</button>
-            <button disabled> Deletar</button>
+            <button
+              type="button"
+              onClick={handleSubmit(submitEdit)}
+              disabled={disabled}
+            >
+              Editar
+            </button>
+            <button disabled={disabled} onClick={handleSubmit(submitDelete)}>
+              Deletar
+            </button>
             <button
               type="submit"
               disabled={

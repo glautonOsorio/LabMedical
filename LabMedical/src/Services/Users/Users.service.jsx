@@ -8,14 +8,6 @@ const Get = async () => {
   return data;
 };
 
-const GetCEP = async (cep) => {
-  const response = await fetch(
-    API_VIACEP.replace("CEP", cep.replace("-", "").trim())
-  );
-  const data = await response.json();
-  return data;
-};
-
 const Create = async (newData) => {
   await fetch(API_URL, {
     method: "POST",
@@ -35,12 +27,6 @@ const Create = async (newData) => {
     });
 };
 
-const Show = async (id) => {
-  const response = await fetch(`${API_URL}/${id}`);
-  const data = await response.json();
-  return data;
-};
-
 //Method GET
 const ShowByEmail = async (email) => {
   const response = await fetch(`${API_URL}?email=${email}&`);
@@ -56,9 +42,9 @@ const Update = (id, data) => {};
 
 export const UserService = {
   Get,
-  GetCEP,
+
   Create,
-  Show,
+
   ShowByEmail,
   Delete,
   Update,
