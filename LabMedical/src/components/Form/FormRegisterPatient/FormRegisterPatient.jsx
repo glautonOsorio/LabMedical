@@ -155,6 +155,30 @@ const FormRegister = () => {
               }}
               error={errors.fullName}
             />
+            <InputComponent
+              id="age"
+              type="number"
+              placeholder="Digite sua Idade"
+              label="Idade"
+              register={{
+                ...register("age", {
+                  required: true,
+                }),
+              }}
+              error={errors.age}
+            />
+            <InputComponent
+              id="url"
+              type="text"
+              placeholder="Link sua Imagem"
+              label="Imagem"
+              register={{
+                ...register("url", {
+                  required: true,
+                }),
+              }}
+              error={errors.url}
+            />
 
             <div>
               <label htmlFor="gender">Gênero</label>
@@ -438,13 +462,15 @@ const FormRegister = () => {
               type="submit"
               disabled={
                 errors.fullName ||
+                errors.age ||
+                errors.url ||
                 errors.birthdate ||
                 errors.cpf ||
                 errors.rg ||
                 errors.telephone ||
                 errors.emergency ||
                 errors.email ||
-                errors.nationalit ||
+                errors.nationality ||
                 errors.allergies ||
                 errors.specificCa ||
                 errors.insurance ||

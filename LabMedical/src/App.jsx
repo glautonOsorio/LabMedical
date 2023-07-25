@@ -21,9 +21,11 @@ function App() {
           <Route path="/register-patient" element={<RegisterPatient />} />
           <Route path="/register-patient/:id" element={<RegisterPatient />} />
           <Route path="/appointment" element={<Appointment />} />
+          <Route path="/appointment/:id" element={<Appointment />} />
           <Route path="/exams" element={<Exams />} />
+          <Route path="/exams/:id" element={<Exams />} />
           <Route path="/medical-records" element={<MedicalRecord />} />
-          <Route path="/patient-records" element={<PatientRecord />} />
+          <Route path="/patient-records/:id" element={<PatientRecord />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </Router>

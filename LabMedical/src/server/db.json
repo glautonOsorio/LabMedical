@@ -359,7 +359,7 @@
       "patient_id": 1,
       "patient_name": "bugabuga",
       "name": "Lobotomia Transorbital",
-      "date": "01/01/2023",
+      "examData": "01/01/2023",
       "time": "21:22",
       "type": "Lobotomia Transorbital",
       "lab": "Super Medicos Reais",
@@ -371,7 +371,7 @@
       "patient_id": 1,
       "patient_name": "bugabuga",
       "name": "Lobotomia Transorbital",
-      "date": "01/01/2023",
+      "examData": "01/01/2023",
       "time": "21:22",
       "type": "Lobotomia Transorbital",
       "lab": "Super Medicos Reais",
@@ -383,7 +383,7 @@
       "patient_id": 2,
       "patient_name": "bugabuga",
       "name": "Lobotomia Transorbital",
-      "date": "01/01/2023",
+      "examData": "01/01/2023",
       "time": "21:22",
       "type": "Lobotomia Transorbital",
       "lab": "Super Medicos Reais",
@@ -391,23 +391,22 @@
       "result": "Morto"
     },
     {
-      "id": 4,
       "patient_id": 3,
       "patient_name": "bugabuga",
       "name": "Lobotomia Transorbital",
-      "date": "01/01/2023",
       "time": "21:22",
       "type": "Lobotomia Transorbital",
       "lab": "Super Medicos Reais",
       "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
-      "result": "Morto"
+      "result": "Morto",
+      "id": 4
     },
     {
       "id": 5,
       "patient_id": 3,
       "patient_name": "bugabuga",
       "name": "Lobotomia Transorbital",
-      "date": "01/01/2023",
+      "examData": "01/01/2023",
       "time": "21:22",
       "type": "Lobotomia Transorbital",
       "lab": "Super Medicos Reais",
@@ -419,7 +418,7 @@
       "patient_id": 4,
       "patient_name": "bugabuga",
       "name": "Lobotomia Transorbital",
-      "date": "01/01/2023",
+      "examData": "01/01/2023",
       "time": "21:22",
       "type": "Lobotomia Transorbital",
       "lab": "Super Medicos Reais",
@@ -431,12 +430,21 @@
       "patient_id": 4,
       "patient_name": "bugabuga",
       "name": "Lobotomia Transorbital",
-      "date": "01/01/2023",
+      "examData": "01/01/2023",
       "time": "21:22",
       "type": "Lobotomia Transorbital",
       "lab": "Super Medicos Reais",
       "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
       "result": "Morto"
+    },
+    {
+      "name": "Lobotomia Transorbital",
+      "time": "21:22",
+      "type": "Lobotomia Transorbital",
+      "lab": "Super Medicos Reais",
+      "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
+      "result": "Morto",
+      "id": 8
     }
   ]
 }

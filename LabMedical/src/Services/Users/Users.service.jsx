@@ -1,5 +1,4 @@
 const API_URL = `http://localhost:3000/users`;
-const API_VIACEP = `http://viacep.com.br/ws/CEP/json/`;
 
 //Method GET
 const Get = async () => {
