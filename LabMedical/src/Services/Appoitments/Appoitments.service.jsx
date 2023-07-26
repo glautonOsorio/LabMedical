@@ -11,6 +11,11 @@ const GetID = async (id) => {
   const data = await response.json();
   return data;
 };
+const GetPatientId = async (patientID) => {
+  const response = await fetch(`${API_URL}?patient_id=${patientID}&`);
+  const data = await response.json();
+  return data;
+};
 
 const Create = async (newData) => {
   await fetch(API_URL, {
@@ -75,8 +80,9 @@ const Delete = async (id) => {
 
 export const Appointment = {
   Get,
-  Create,
   GetID,
+  GetPatientId,
+  Create,
   Update,
   Delete,
 };

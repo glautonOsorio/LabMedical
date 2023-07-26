@@ -41,9 +41,7 @@ const Update = (id, data) => {};
 
 export const UserService = {
   Get,
-
   Create,
-
   ShowByEmail,
   Delete,
   Update,

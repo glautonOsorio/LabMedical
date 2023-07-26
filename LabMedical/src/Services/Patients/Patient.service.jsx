@@ -83,7 +83,7 @@ const Update = async (id, newData) => {
       alert(`Erro ao atualizar ${err.message}`);
     });
 };
-const Show = async (id) => {
+const GetID = async (id) => {
   const response = await fetch(`${API_URL}/${id}`);
   const data = await response.json();
   return data;
@@ -110,7 +110,7 @@ const GetCEP = async (cep) => {
 
 export const Patient = {
   Create,
-  Show,
+  GetID,
   GetCEP,
   Update,
   Delete,

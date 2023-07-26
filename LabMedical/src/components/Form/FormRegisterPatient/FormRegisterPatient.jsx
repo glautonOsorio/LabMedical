@@ -20,7 +20,7 @@ const FormRegister = () => {
   useEffect(() => {
     if (params.id) {
       const paramsUser = async () => {
-        await Patient.Show(params.id).then((user) => {
+        await Patient.GetID(params.id).then((user) => {
           setValue("name", user.name);
           setValue("gender", user.gender);
           setValue("age", user.age);
@@ -63,39 +63,16 @@ const FormRegister = () => {
     });
   };
   const submitForm = async (data) => {
-    const {
-      name,
-      gender,
-      age,
-      birthdate,
-      cpf,
-      rg,
-      maritalStatus,
-      telephone,
-      email,
-      nationality,
-      emergency,
-      allergies,
-      specificCare,
-      insurance,
-      insuranceNumber,
-      expireDate,
-      url,
-      cep,
-      city,
-      state,
-      place,
-      number,
-      complement,
-      street,
-      referencePoint,
-    } = data;
+    const body = {
+      ...data,
+    };
 
+    await setValue("birthdate", new Date(body.birthdate));
     if (data.insurance === "") {
       await setValue("insurance", "Sem Plano");
     }
 
-    await Patient.Create(data);
+    await Patient.Create(body);
   };
   const submitEdit = async (data) => {
     const {

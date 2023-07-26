@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { InputComponent } from "../Input/Input";
 import "./MedicalRecords.style.css";
+import { Link } from "react-router-dom";
 
 const MedicalRecords = () => {
   const [pacientes, setPacientes] = useState();
@@ -29,15 +30,15 @@ const MedicalRecords = () => {
         {pacientes &&
           pacientes.map((paciente) => {
             return (
-              <div className="Row">
-                <div key={paciente.id} className="div2">
+              <div key={paciente.id} className="Row">
+                <div className="div2">
                   <span>{paciente.id}</span>
 
                   <span> {paciente.name}</span>
 
                   <span> {paciente.insurance}</span>
                 </div>
-                <button>7</button>
+                <Link to={`/patient-records/${paciente.id}`}>7</Link>
               </div>
             );
           })}
