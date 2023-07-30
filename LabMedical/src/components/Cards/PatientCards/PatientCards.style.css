@@ -1,0 +1,29 @@
+.patientsContainer {
+  width: 60rem;
+  height: 20rem;
+  padding: 0.5em;
+  margin-left: 2rem;
+  background-color: #ebf3f3;
+  gap: 1em;
+  overflow-y: scroll;
+}
+.patientsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-content: center;
+  gap: 1em;
+  background-color: #ebf3f3;
+  box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.37);
+}
+.homeContent {
+  background-color: #ebf3f3;
+  border: 0.1rem solid #5281dc;
+  box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.37);
+
+  color: #5281dc;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

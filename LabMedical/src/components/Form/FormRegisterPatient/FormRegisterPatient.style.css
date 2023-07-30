@@ -1,0 +1,74 @@
+.formRegisterP {
+  width: 100%;
+  height: 100%;
+}
+.formRegisterPContainer {
+  background-color: #ebf3f3;
+  width: 60rem;
+  height: 35rem;
+  margin-left: 22rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #5281dc;
+  box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.37);
+  overflow-y: scroll;
+}
+.formContent {
+  margin: 1rem;
+  gap: 1rem;
+}
+.formRow {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.formRowSearch {
+  display: flex;
+  flex-direction: row;
+}
+.cepButton {
+  height: 3rem !important;
+}
+
+.genderLabel,
+.labelMstatus {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  align-self: stretch;
+  color: #5281dc;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.select {
+  display: flex;
+  width: 25rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.select select {
+  display: inline-block;
+  width: 6rem;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: 0;
+  border: 1px solid #5281dc;
+  border-radius: 0.5rem;
+  color: #12619d;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.select select::-ms-expand {
+  display: none;
+}
+.select select:hover,
+.select select:focus {
+  color: #12619d;
+}
