@@ -1,0 +1,26 @@
+.loginContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.loginImageCollum {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10rem;
+  width: 80rem;
+  border-right: 0.3rem solid #35abd0;
+}
+
+.loginImage {
+  width: 10rem;
+  margin-left: 45rem;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: right;
+  width: 50rem;
+  background-image: linear-gradient(to bottom right, #e0ffff 60%, #20b2aa);
+}

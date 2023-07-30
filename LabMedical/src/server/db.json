@@ -1,0 +1,137 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "roberto@usercep.com",
+      "password": "12345678",
+      "name": "Roberto Garcia",
+      "url": "https://pm1.aminoapps.com/7045/17a2d48b421327ce0657dcedf66e4e6706b3477er1-660-664v2_hq.jpg"
+    },
+    {
+      "id": 2,
+      "email": "user@gmail.com",
+      "password": "qwertyui",
+      "name": "GigaChad",
+      "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg"
+    },
+    {
+      "id": 3,
+      "email": "usuario@usercep.com",
+      "password": "12345678",
+      "name": "Kermit The Frog",
+      "url": "https://m.media-amazon.com/images/M/MV5BMTY5MDc0ODkyNV5BMl5BanBnXkFtZTcwODI4ODg3Ng@@._V1_FMjpg_UX1000_.jpg"
+    },
+    {
+      "id": 4,
+      "email": "teste@teste.com",
+      "password": "12345678",
+      "name": "Macaco",
+      "url": "https://media.npr.org/assets/img/2017/09/12/macaca_nigra_self-portrait-3e0070aa19a7fe36e802253048411a38f14a79f8-s1100-c50.jpg"
+    },
+    {
+      "name": "UniBoy",
+      "url": "https://www.petlove.com.br/images/breeds/192825/profile/original/siames-p.jpg?1532626975",
+      "email": "unicouni@cat.com",
+      "password": "46464646",
+      "id": 5
+    }
+  ],
+  "pacientes": [
+    {
+      "name": "GigaChad",
+      "gender": "Outro",
+      "age": "9999",
+      "birthdate": "0001-01-01",
+      "cpf": "888.888.888-88",
+      "rg": "888888888",
+      "maritalStatus": "Solteiro",
+      "telephone": "(99) 9 9999-99999",
+      "email": "s@s.com",
+      "nationality": "Terra",
+      "emergency": "(99) 9 9999-99999",
+      "allergies": "",
+      "specificCare": "",
+      "insurance": "Sem Plano",
+      "insuranceNumber": "",
+      "expireDate": "",
+      "url": "https://datepsychology.com/wp-content/uploads/2022/09/gigachad.jpg",
+      "cep": "",
+      "city": "",
+      "state": "",
+      "place": "",
+      "number": "",
+      "complement": "",
+      "street": "",
+      "referencePoint": "",
+      "id": 1
+    },
+    {
+      "name": "UniBocchi",
+      "gender": "Homem",
+      "age": "9",
+      "birthdate": "2018-08-12",
+      "cpf": "774.541.213-13",
+      "rg": "6464645453",
+      "maritalStatus": "Solteiro",
+      "telephone": "(53) 4 2461-37653",
+      "email": "uni@gmail.com",
+      "nationality": "Santa Catarina",
+      "emergency": "(88) 8 5551-21123",
+      "allergies": "",
+      "specificCare": "",
+      "insurance": "Sem Plano",
+      "insuranceNumber": "",
+      "expireDate": "",
+      "url": "https://www.petlove.com.br/images/breeds/192825/profile/original/siames-p.jpg?1532626975",
+      "cep": "",
+      "city": "",
+      "state": "",
+      "place": "",
+      "number": "",
+      "complement": "",
+      "street": "",
+      "referencePoint": "",
+      "id": 2
+    }
+  ],
+  "consultas": [
+    {
+      "reason": "Dor nos músculos ",
+      "date": "2014-02-04T00:00:00.000Z",
+      "time": "01:01",
+      "description": "Dor na perna direita na panturrilha e na sola do pé",
+      "recipe": "",
+      "dosage": "Repouso e menos corridas matinais , pelo menos 2 semanas de repouso para não forçar os músculos da perna",
+      "id": 1
+    },
+    {
+      "reason": "Corte na perna",
+      "date": "2020-11-15T00:00:00.000Z",
+      "time": "05:49",
+      "description": "Corte nas pernas e nos braços",
+      "recipe": "Dermotrat Creme",
+      "dosage": "Uma vez por dia passar a pomada nas feridas por 10 dias, e repouso por 10 dias para as feridas não se abrir",
+      "id": 2
+    }
+  ],
+  "exames": [
+    {
+      "name": "Exames de fezez",
+      "time": "15:53",
+      "type": "Cirurgico",
+      "lab": "LabMedical",
+      "url": "",
+      "result": "Tudo Normal",
+      "id": 1
+    },
+    {
+      "name": "Hemograma",
+      "time": "15:53",
+      "type": "Laboratorial",
+      "lab": "LabMedical",
+      "url": "",
+      "result": "Menos beterraba ajudaria",
+      "id": 2
+    }
+  ]
+}
