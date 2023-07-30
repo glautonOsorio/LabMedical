@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../../../contexts/auth.context";
 import { InputComponent } from "../../Input/Input";
-import { UserService } from "../../../Services/Users/Users.service.jsx";
 import "./FormLogin.style.css";
+import { MedicData } from "../../../Services/Medic/Medic.service";
 
 export const FormLogin = () => {
   const {
@@ -22,7 +22,7 @@ export const FormLogin = () => {
   const submitForm = async (data) => {
     const { email, password } = data;
 
-    const user = await UserService.ShowByEmail(email);
+    const user = await MedicData.ShowByEmail(email);
 
     if (!user) {
       alert("Usuário não cadastrado");
@@ -44,6 +44,9 @@ export const FormLogin = () => {
 
   const redirectRegister = () => {
     navigate("/register");
+  };
+  const notFinished = () => {
+    alert("Função em desenvolvimento");
   };
 
   return (
@@ -87,7 +90,7 @@ export const FormLogin = () => {
 
         <div className="formAction">
           <div className="formLinks">
-            <a>Esqueci minha senha</a>
+            <a onClick={notFinished}>Esqueci minha senha</a>
             <button
               onClick={redirectRegister}
               className="formCreateButton"

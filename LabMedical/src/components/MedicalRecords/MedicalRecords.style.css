@@ -6,7 +6,18 @@
   width: 60rem;
 }
 
-.recordsSearch {
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
+  color: #12619d;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.searchPatient {
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -15,7 +26,6 @@
 .recordsContent {
   display: flex;
   width: 909px;
-
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -24,26 +34,48 @@
 }
 
 .div1 {
-  width: 909px;
+  width: 60rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
-  gap: 18rem;
-
-  flex-shrink: 0;
+  align-self: center;
+  color: #12619d;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 .div2 {
-  background-color: aliceblue;
+  background-color: #ebf3f3;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #5281dc;
   width: 60rem;
   height: 5rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
-  align-content: center;
-  gap: 18rem;
+  align-self: center;
+  color: #12619d;
   font-size: 1.5rem;
-
-  flex-shrink: 0;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.textPosition1 {
+  position: relative;
+  right: 15rem;
+}
+.textPosition2 {
+  align-self: center;
+}
+.textPosition3 {
+  position: relative;
+  left: 15rem;
+}
+.linkArrow {
+  position: relative;
+  right: 2rem;
+  top: 1.5rem;
 }
 
 .Row {

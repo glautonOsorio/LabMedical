@@ -12,6 +12,9 @@ export const InputComponent = ({
   placeholder,
   register,
   error,
+  mask,
+  as,
+  onInput,
 }) => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -28,6 +31,9 @@ export const InputComponent = ({
       {type !== "textarea" && (
         <Styled.InputContainer>
           <Styled.Input
+            onInput={onInput}
+            mask={mask}
+            as={as}
             $color={error && "danger"}
             type={showPassword ? "text" : type}
             id={id}

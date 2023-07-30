@@ -1,5 +1,14 @@
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import SearchIcon from "@mui/icons-material/Search";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./PatientCards.style.css";
+import { InputComponent } from "../../Input/Input";
 
 const CardPatients = () => {
   const [pacientes, setPacientes] = useState([]);
@@ -30,28 +39,58 @@ const CardPatients = () => {
 
   return (
     <div>
-      <form onSubmit={buscarPaciente}>
+      <form className="search" onSubmit={buscarPaciente}>
         <legend>Informações Rápidas de Pacientes</legend>
-        <input
-          type="search"
-          placeholder="Digite um nome"
-          onInput={filtrarPacientes}
-        />
-        <button type="submit">Busca</button>
+        <div className="searchPatient">
+          <InputComponent
+            type="search"
+            placeholder="Digite um nome"
+            onInput={filtrarPacientes}
+          />
+          <Button variant="outlined" type="submit">
+            <SearchIcon />
+          </Button>
+        </div>
       </form>
-      {pacienteFiltrado &&
-        pacienteFiltrado.map((paciente) => {
-          return (
-            <div key={paciente?.id}>
-              <img src={paciente?.url} alt="erro" />
-              <h1> {paciente?.name}</h1>
-              <p> {paciente?.age}</p>
-              <span> {paciente?.telephone}</span>
-              <h2> {paciente?.insurance} </h2>
-              <Link to={`/register-patient/${paciente?.id}`}>Ver Mais</Link>
-            </div>
-          );
-        })}
+      <div className="patientsContainer">
+        <div className="patientsGrid">
+          {pacienteFiltrado &&
+            pacienteFiltrado.map((paciente) => {
+              return (
+                <Card key={paciente?.id} sx={{ maxWidth: 345 }}>
+                  <CardMedia
+                    image={paciente?.url}
+                    alt="erro"
+                    component="img"
+                    height="140"
+                  />
+                  <CardContent className="homeContent">
+                    <Typography gutterBottom variant="h5" component="div">
+                      <strong>Nome:</strong> {paciente?.name}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      <strong>Idade:</strong>
+                      {paciente?.age}
+                    </Typography>
+                    <Typography gutterBottom variant="h5" component="div">
+                      <strong>Telefone:</strong>
+                      <br />
+                      {paciente?.telephone}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      <strong>{paciente?.insurance}</strong>
+                    </Typography>
+                    <CardActions>
+                      <Link to={`/register-patient/${paciente?.id}`}>
+                        Ver Mais
+                      </Link>
+                    </CardActions>
+                  </CardContent>
+                </Card>
+              );
+            })}
+        </div>
+      </div>
     </div>
   );
 };

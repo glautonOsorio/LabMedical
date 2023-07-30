@@ -45,6 +45,7 @@ export const TextArea = styled.textarea`
     ${({ $color }) => {
       return $color === "danger" ? "#BE2E2E" : "#5281DC";
     }};
+  height: 5rem;
 `;
 
 export const InputContainer = styled.div`

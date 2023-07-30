@@ -1,3 +1,7 @@
+import PeopleIcon from "@mui/icons-material/People";
+import ChecklistIcon from "@mui/icons-material/Checklist";
+import MedicalServicesIcon from "@mui/icons-material/MedicalServices";
+
 import "./Card.style.css";
 import { useEffect, useState } from "react";
 
@@ -33,14 +37,14 @@ const Cards = () => {
       <div className=" cardRow">
         <div className="cardContent">
           <div className="cardCollum">
-            <span> Imagem</span>
+            <PeopleIcon fontSize="large" />
             <span>{pacientes}</span>
           </div>
           <h4>Pacientes</h4>
         </div>
         <div className="cardContent">
           <div className="cardCollum">
-            <span> Imagem</span>
+            <ChecklistIcon fontSize="large" />
             {consultas}
           </div>
           <h4>Consultas</h4>
@@ -48,7 +52,7 @@ const Cards = () => {
 
         <div className="cardContent">
           <div className="cardCollum">
-            <span> Imagem</span>
+            <MedicalServicesIcon fontSize="large" />
             {exames}
           </div>
           <h4>Exames</h4>

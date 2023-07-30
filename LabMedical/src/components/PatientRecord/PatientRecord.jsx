@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Patient } from "../../Services/Patients/Patient.service";
 import { Appointment } from "../../Services/Appoitments/Appoitments.service";
 import { Exams } from "../../Services/Exams/Exams.service";
+import "./Patient.Record.css";
 
 const PatientRecords = () => {
   const [patient, setPatient] = useState([]);
@@ -34,25 +35,30 @@ const PatientRecords = () => {
   }, []);
 
   return (
-    <main>
+    <main className="patientRecordsContainer">
       {patient && (
-        <div key={patient.id}>
+        <div className="patientRecordsContent" key={patient.id}>
           <h1> {patient.name} </h1>
-          <span>Convênio:{patient.insurance} </span>
-          <span>Convênio:{patient.emergency} </span>
-          <span>Convênio:{patient.allergies} </span>
-          <span>Convênio:{patient.specificCare} </span>
+          <span>Convênio: {patient.insurance} </span>
+          <span>Telefone: {patient.emergency} </span>
+          <span>Alergia: {patient.allergies} </span>
+          <span>Cuidado Especifico: {patient.specificCare} </span>
         </div>
       )}
-      <div>
+      <div className="patientRecordsContent">
         <h1>Consultas</h1>
         {appointments &&
           appointments.map((appointment) => {
             return (
-              <div key={appointment.id}>
-                <div>
+              <div className="patientRecordsContent" key={appointment.id}>
+                <div className=" PatientRecordsRow">
                   <h2>Motivo da Consulta: {appointment.reason}</h2>
-                  <Link to={`/appointment/${appointment.id}`}>Editar</Link>
+                  <Link
+                    className="LinkPatientRecord"
+                    to={`/appointment/${appointment.id}`}
+                  >
+                    Editar
+                  </Link>
                 </div>
                 <span>Descrição:</span>
                 <p> {appointment.description}</p>
@@ -67,15 +73,17 @@ const PatientRecords = () => {
             );
           })}
       </div>
-      <div>
+      <div className="patientRecordsContent">
         <h1>Exames</h1>
         {exams &&
           exams.map((exam) => {
             return (
-              <div key={exam.id}>
-                <div>
+              <div className="patientRecordsContent" key={exam.id}>
+                <div className=" PatientRecordsRow">
                   <h2>{exam.lab}</h2>
-                  <Link to={`/exams/${exam.id}`}>Editar</Link>
+                  <Link className="LinkPatientRecord" to={`/exams/${exam.id}`}>
+                    Editar
+                  </Link>
                 </div>
                 <span>{exam.name}</span>
                 <span>Tipo do Exame:{exam.type}</span>

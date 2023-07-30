@@ -1,0 +1,50 @@
+.patientRecordsContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #ebf3f3;
+  width: 60rem;
+  height: 35rem;
+  margin-left: 22rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #5281dc;
+  box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.37);
+  overflow-y: scroll;
+}
+
+.patientRecordsContent {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  gap: 1rem;
+  color: #5281dc;
+  font-size: 1rem;
+  font-style: oblique;
+  font-weight: 400;
+}
+
+.PatientRecordsRow {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.LinkPatientRecord {
+  text-decoration: none;
+  background-color: whitesmoke;
+  color: #5281dc;
+  font-style: italic;
+  font-size: 2rem;
+  width: 7rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #5281dc;
+  box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.37);
+}
+
+.LinkPatientRecord:hover {
+  background-color: #5281dc;
+  color: whitesmoke;
+}

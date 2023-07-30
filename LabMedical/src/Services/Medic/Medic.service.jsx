@@ -11,6 +11,8 @@ const Create = async (newData) => {
   await fetch(API_URL, {
     method: "POST",
     body: JSON.stringify({
+      name: newData.name,
+      url: newData.url,
       email: newData.email,
       password: newData.password,
     }),
@@ -39,7 +41,7 @@ const Delete = (id) => {};
 //Method PUT/PATCH
 const Update = (id, data) => {};
 
-export const UserService = {
+export const MedicData = {
   Get,
   Create,
   ShowByEmail,

@@ -1,5 +1,12 @@
-import { useLocation, useParams } from "react-router-dom";
+import Button from "@mui/material/Button";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
+import SearchIcon from "@mui/icons-material/Search";
+import SaveIcon from "@mui/icons-material/Save";
+import CircularProgress from "@mui/material/CircularProgress";
+import InputMask from "react-input-mask";
 
+import { useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { InputComponent } from "../../Input/Input";
 import { Patient } from "../../../Services/Patients/Patient.service";
@@ -15,6 +22,12 @@ const FormRegister = () => {
     formState: { errors },
   } = useForm();
   const [disabled, setDisabled] = useState(true);
+  const [saveLoad, setSaveLoad] = useState(false);
+  const [editLoad, setEditLoad] = useState(false);
+  const [deleteLoad, setDeleteLoad] = useState(false);
+  const [maskedInput, setMaskedInput] = useState(true);
+  const [unMaskedInput, setUnMaskedInput] = useState(false);
+
   const params = useParams();
 
   useEffect(() => {
@@ -49,6 +62,8 @@ const FormRegister = () => {
         });
       };
       paramsUser();
+      setMaskedInput(false);
+      setUnMaskedInput(true);
       setDisabled(false);
     }
   }, []);
@@ -62,64 +77,99 @@ const FormRegister = () => {
       setValue("street", response.bairro);
     });
   };
+  const unMaskedPhone = () => {
+    return (
+      <>
+        <InputComponent
+          id="telephone"
+          type="text"
+          label="Telefone"
+          register={{
+            ...register("telephone", { required: true }),
+          }}
+          error={errors.telephone}
+        />
+        <InputComponent
+          id="emergency"
+          type="text"
+          label="Contato de Emergência"
+          register={{
+            ...register("emergency", { required: true }),
+          }}
+          error={errors.emergency}
+        />
+      </>
+    );
+  };
+  const unMaskedCpf = () => {
+    return (
+      <>
+        <InputComponent
+          id="cpf"
+          type="text"
+          label="CPF"
+          register={{
+            ...register("cpf", {
+              required: true,
+              maxLength: 14,
+            }),
+          }}
+          error={errors.cpf}
+        />
+      </>
+    );
+  };
   const submitForm = async (data) => {
+    setSaveLoad(true);
     const body = {
       ...data,
     };
 
     await setValue("birthdate", new Date(body.birthdate));
-    if (data.insurance === "") {
+    if (body.insurance === "") {
       await setValue("insurance", "Sem Plano");
     }
-
     await Patient.Create(body);
+
+    setTimeout(() => {
+      setSaveLoad(false);
+    }, 2000);
   };
   const submitEdit = async (data) => {
-    const {
-      name,
-      gender,
-      age,
-      birthdate,
-      cpf,
-      rg,
-      maritalStatus,
-      telephone,
-      email,
-      nationality,
-      emergency,
-      allergies,
-      specificCare,
-      insurance,
-      insuranceNumber,
-      expireDate,
-      url,
-      cep,
-      city,
-      state,
-      place,
-      number,
-      complement,
-      street,
-      referencePoint,
-    } = data;
+    setEditLoad(true);
+    const body = {
+      ...data,
+    };
 
-    await Patient.Update(params.id, data);
-    {
-    }
+    await setValue("birthdate", new Date(body.birthdate));
+
+    await Patient.Update(params.id, body);
+
+    setTimeout(async () => {
+      setEditLoad(false);
+    }, 2000);
   };
   const submitDelete = async () => {
+    setDeleteLoad(true);
     await Patient.Delete(params.id);
+
+    setTimeout(async () => {
+      setDeleteLoad(false);
+    }, 2000);
   };
 
   return (
-    <div className="formRegisterP" onSubmit={handleSubmit(submitForm)}>
-      <form>
-        <legend>Preencha os campos para cadastrar</legend>
-        <div>
-          <legend>Indentificação</legend>
+    <div className="formRegister">
+      <form
+        className="formRegisterPContainer"
+        onSubmit={handleSubmit(submitForm)}
+      >
+        <legend className="formTitle">Preencha os campos para cadastrar</legend>
+        <div className="formContent">
+          <legend className="formTitle">Indentificação</legend>
           <div className="formRow">
             <InputComponent
-              id="fullName"
+              id="name"
               type="text"
               placeholder="Digite seu nome"
               label="Nome Completo"
@@ -130,7 +180,7 @@ const FormRegister = () => {
                   maxLength: 50,
                 }),
               }}
-              error={errors.fullName}
+              error={errors.name}
             />
             <InputComponent
               id="age"
@@ -157,14 +207,18 @@ const FormRegister = () => {
               error={errors.url}
             />
 
-            <div>
-              <label htmlFor="gender">Gênero</label>
+            <div className="select">
+              <label className="genderLabel" htmlFor="gender">
+                Gênero
+              </label>
               <select id="gender" {...register("gender", { required: true })}>
                 <option value="Homem">Homem</option>
                 <option value="Mulher">Mulher</option>
                 <option value="Outro">outro</option>
               </select>
             </div>
+          </div>
+          <div className="formRow">
             <InputComponent
               id="birthdate"
               type="date"
@@ -174,24 +228,26 @@ const FormRegister = () => {
               }}
               error={errors.birthdate}
             />
-          </div>
-          <div className="formRow">
-            <InputComponent
-              id="cpf"
-              type="text"
-              placeholder="999.999.999-99"
-              label="CPF"
-              register={{
-                ...register("cpf", {
-                  required: true,
-                  maxLength: 11,
-                  pattern: /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/.test(
-                    "676.928.678-52"
-                  ),
-                }),
-              }}
-              error={errors.cpf}
-            />
+            {maskedInput && (
+              <>
+                <InputComponent
+                  id="cpf"
+                  type="text"
+                  as={InputMask}
+                  mask="999.999.999-99"
+                  label="CPF"
+                  register={{
+                    ...register("cpf", {
+                      required: true,
+                      maxLength: 14,
+                    }),
+                  }}
+                  error={errors.cpf}
+                />
+              </>
+            )}
+            {unMaskedInput && unMaskedCpf()}
+
             <InputComponent
               id="rg"
               type="text"
@@ -202,8 +258,10 @@ const FormRegister = () => {
               }}
               error={errors.rg}
             />
-            <div>
-              <label htmlFor="maritalStatus">Estado Civil</label>
+            <div className="select">
+              <label className="labelMstatus" htmlFor="maritalStatus">
+                Estado Civil
+              </label>
               <select
                 id="maritalStatus"
                 {...register("maritalStatus", { required: true })}
@@ -217,26 +275,33 @@ const FormRegister = () => {
             </div>
           </div>
           <div className="formRow">
-            <InputComponent
-              id="telephone"
-              type="text"
-              placeholder="(99) 9 9999-99999"
-              label="Telefone"
-              register={{
-                ...register("telephone", { required: true }),
-              }}
-              error={errors.telephone}
-            />
-            <InputComponent
-              id="emergency"
-              type="text"
-              placeholder="(99) 9 9999-99999"
-              label="Contato de Emergência"
-              register={{
-                ...register("emergency", { required: true }),
-              }}
-              error={errors.emergency}
-            />
+            {maskedInput && (
+              <>
+                <InputComponent
+                  id="telephone"
+                  type="text"
+                  as={InputMask}
+                  mask="(99) 9 9999-99999"
+                  label="Telefone"
+                  register={{
+                    ...register("telephone", { required: true }),
+                  }}
+                  error={errors.telephone}
+                />
+                <InputComponent
+                  id="emergency"
+                  type="text"
+                  as={InputMask}
+                  mask="(99) 9 9999-99999"
+                  label="Contato de Emergência"
+                  register={{
+                    ...register("emergency", { required: true }),
+                  }}
+                  error={errors.emergency}
+                />
+              </>
+            )}
+            {unMaskedInput && unMaskedPhone()}
             <InputComponent
               id="email"
               type="email"
@@ -266,6 +331,8 @@ const FormRegister = () => {
               }}
               error={errors.nationality}
             />
+          </div>
+          <div className="formRow ">
             <InputComponent
               id="allergies"
               type="textarea"
@@ -290,8 +357,8 @@ const FormRegister = () => {
             />
           </div>
         </div>
-        <div>
-          <legend>Convênio</legend>
+        <div className="formContent">
+          <legend className="formTitle">Convênio</legend>
 
           <div className="formRow">
             <InputComponent
@@ -325,9 +392,9 @@ const FormRegister = () => {
             />
           </div>
         </div>
-        <div>
-          <legend>Dados de Endereço</legend>
-          <div className="formRow">
+        <div className="formContent">
+          <legend className="formTitle">Dados de Endereço</legend>
+          <div className="formRowSearch">
             <InputComponent
               id="cep"
               type="text"
@@ -338,9 +405,16 @@ const FormRegister = () => {
               }}
               error={errors.cep}
             />
-            <button type="button" onClick={handleCep}>
-              Cep teste
-            </button>
+            <Button
+              className="cepButton"
+              variant="outlined"
+              type="button"
+              onClick={handleCep}
+            >
+              <SearchIcon />
+            </Button>
+          </div>
+          <div className="formRow">
             <InputComponent
               id="city"
               type="text"
@@ -425,20 +499,31 @@ const FormRegister = () => {
             />
           </div>
           <div>
-            <button
+            <Button
+              variant="outlined"
+              endIcon={<EditIcon />}
               type="button"
               onClick={handleSubmit(submitEdit)}
               disabled={disabled}
             >
+              {editLoad && <CircularProgress />}
               Editar
-            </button>
-            <button disabled={disabled} onClick={handleSubmit(submitDelete)}>
+            </Button>
+            <Button
+              variant="outlined"
+              endIcon={<DeleteIcon />}
+              disabled={disabled}
+              onClick={handleSubmit(submitDelete)}
+            >
+              {deleteLoad && <CircularProgress />}
               Deletar
-            </button>
-            <button
+            </Button>
+            <Button
+              variant="outlined"
+              endIcon={<SaveIcon />}
               type="submit"
               disabled={
-                errors.fullName ||
+                errors.name ||
                 errors.age ||
                 errors.url ||
                 errors.birthdate ||
@@ -463,8 +548,9 @@ const FormRegister = () => {
                 errors.referenceP
               }
             >
+              {saveLoad && <CircularProgress />}
               Salvar
-            </button>
+            </Button>
           </div>
         </div>
       </form>

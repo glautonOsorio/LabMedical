@@ -14,12 +14,19 @@
 .cardContent {
   display: flex;
   flex-direction: column;
-  width: 16rem;
-  height: 12rem;
+  width: 14rem;
+  height: 10rem;
+  background-color: #ebf3f3;
   box-shadow: 7px 7px 5px 0px rgba(224, 221, 224, 0.52);
   margin: 1rem;
   align-items: center;
   justify-content: center;
+
+  color: #5281dc;
+  font-size: 1rem;
+  font-style: oblique;
+  font-weight: 400;
+  line-height: normal;
 }
 .cardCollum {
   display: flex;
